@@ -1,0 +1,222 @@
+/* Reset some basic elements */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Container for content */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header styling */
+header {
+    background-color: #80428b;
+    color: #e0e0e0;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 3px solid #5b2f63;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #bb86fc;
+}
+
+.ahulogo {
+    max-width: 20rem;
+    box-shadow: 5px 12px 45px 5px black;
+    border-radius: 2rem;
+}
+
+/* Header title */
+.consults {
+    font-family: JetBrains Mono;
+    font-size: 6rem;
+    /* Combine animations: first slam, then wiggle */
+    animation: slam 0.8s ease forwards, wiggle 3s ease-in-out 0.8s infinite;
+    color: #ffffff;
+    text-shadow: 2px 4px 4px black;
+
+}
+
+/* Section styling */
+section {
+    background: #1e1e1e;
+    margin-bottom: 20px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Section titles */
+section h2 {
+    text-align: center;
+    color: #80428b;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Wiggle Animation */
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+/* Slam Animation */
+@keyframes slam {
+    0% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(0) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Applying the wiggle animation to the About Me title */
+#about h2 {
+    display: inline-block;
+    animation: wiggle 1s ease-in-out infinite;
+}
+
+/* Skills section styling */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.skill {
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+/* Bubble shape */
+.bubble {
+    background-color: #bb86fc;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Oval shape */
+.oval {
+    background-color: #03dac6;
+    border-radius: 50px / 25px;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Diamond shape */
+.diamond {
+    background-color: #6200ea;
+    width: 150px;
+    height: 150px;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diamond span {
+    transform: rotate(-45deg);
+}
+
+/* Hexagon shape */
+.hexagon {
+    background-color: #cf6679;
+    width: 150px;
+    height: 86.6px;
+    position: relative;
+    margin: 43.3px 0;
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+}
+
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 43.3px solid #cf6679;
+}
+
+.hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 43.3px solid #cf6679;
+}
+
+.hexagon > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
+/* Footer styling */
+footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-top: 3px solid #6200ea;
+}
+
+footer p {
+    font-size: 1em;
+}
